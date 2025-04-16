@@ -19,7 +19,7 @@ from datetime import datetime
 import numpy as np
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*", "supports_credentials": True}})  # Enable CORS for all routes with SSE support
+CORS(app, resources={r"/*": {"origins": "https://vision-front-alpha.vercel.app", "supports_credentials": True}})  # Enable CORS for all routes with SSE support
 
 # Create a message queue for each client
 clients = {}
