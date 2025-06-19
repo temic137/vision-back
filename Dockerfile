@@ -27,5 +27,5 @@ USER app
 # Expose port (adjust if your Flask app uses a different port)
 EXPOSE 5000
 
-# Run the application
-CMD ["python", "app.py"]
+# Add gunicorn to your requirements.txt first
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
